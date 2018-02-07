@@ -25,3 +25,26 @@ end
 
 
 sound(snd,fs);
+
+%% added part from meeting on 2-7-18
+
+
+
+save generateSound.mat; %saving the sound that was made
+%clear snd fs % removes variables if you want to
+%^^^^if used, you must load the file again
+
+%% save the sound above to a .wav file
+
+%load generateSound.mat; %use only if the 'clear snd fs' is used above
+
+%saving the sound previously made to a .wav file
+filename= 'SOUND.wav'; %naming the sound that was created
+audiowrite(filename,snd,fs);
+[snd,fs]=audioread('SOUND.wav');
+sound(snd,fs);
+%sound is now saved in the same folder with the code
+%clear sound
+
+%keeps saying "Warning: Data clipped when writing file"
+% what does that mean ^^ 

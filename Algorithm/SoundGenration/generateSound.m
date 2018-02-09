@@ -48,3 +48,6 @@ sound(snd,fs);
 
 %keeps saying "Warning: Data clipped when writing file"
 % what does that mean ^^ 
+
+
+%test

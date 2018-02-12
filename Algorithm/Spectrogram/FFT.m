@@ -11,16 +11,19 @@ function [ FFT_complex,FFT_mag,freqs ] = FFT( vec,Fs,Plot )
     L = length(vec);
     
     %utilize fft fuction in matlab to produce the output vector
+    %this output includes negative and positive frequencies
     FFT_complex = fft(vec);
     
     %compute the magnitude of each component from the fft
-    FFT_mag = abs
+    %this output includes negative and positive frequencies
+    FFT_mag = abs(FFT_complex);
+    
     %create a vector of the frequencies for the axis
     freqs =  Fs*(0:(L/2))/L;
     
     %plot if the varible plot is true
     if(Plot)
-        plaot
+        %plaot
     end
 end
 

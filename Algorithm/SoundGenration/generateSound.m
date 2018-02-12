@@ -5,7 +5,7 @@
 for i = 1 : 3
 
 %random int to produce frequency
-ran_num = rand * 1000
+ran_num = rand * 1000;
 
 
 %frequency of the tone we want (Hz)
@@ -27,8 +27,8 @@ snd=amp*cos(2*pi*f*t);
 
 
     for i = 1:15
-    %generating random numbers to add in background frequencies
-    snd = snd + .05 * randn(size(t));
+        %generating random numbers to add in background frequencies
+        snd = snd + .05 * randn(size(t));
     end
 
 

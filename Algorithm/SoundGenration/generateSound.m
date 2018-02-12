@@ -11,16 +11,17 @@ amp = 1;
 %function which varies depending on the computers hardware)
 fs=150000;
 
+
 %time in seconds
 t=0:(1/fs):2;
 
 snd=amp*cos(2*pi*f*t);
 
-% add in several background frequencies between 
-freqs = random('unif',10,2000,1,15);
+
 
 for i = 1:15
-    snd = snd + (0.01*amp)*cos(2*pi*freqs(i)*t);
+    %generating random numbers to add in background frequencies
+    snd = snd + .05 * randn(size(t));
 end
 
 

@@ -37,7 +37,7 @@ sound(snd,fs);
 pause(4);
 end
 
-%% added part from meeting on 2-7-18
+%% added part from  meeting on 2-7-18
 
 
 
